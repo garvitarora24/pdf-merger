@@ -1,11 +1,14 @@
 {
+  "homepage": "http://garvitarora24.github.io/pdf-merger",
   "name": "pdf-tools",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +17,8 @@
     "express": "^4.18.2",
     "multer": "^1.4.5-lts.1",
     "pdf-merger-js": "^4.3.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.0"
   }
 }
